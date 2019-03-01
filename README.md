@@ -2,7 +2,7 @@
 A python client to interact with CheckPoint R80 API (https://sc1.checkpoint.com/documents/R80/APIs/#ws).
 
 # Installation
-```
+```bash
 pip install checkpoint-client
 ```
 
@@ -17,7 +17,7 @@ pip install checkpoint-client
 
 # Example
 Sample configuration file
-```
+```ini
 [checkpoint]
 username = myusername
 # API does not support cert based authentication
@@ -47,7 +47,7 @@ target = LAB_DMZ_CLUSTER
 ```
 
 A simple script to add host objects to an existing group object, publish changes and finally, install the policy.
-```
+```python
 from checkpoint_client import CheckPointClient
 from checkpoint_client.utils import set_default_logger, add_logger_streamhandler
 
