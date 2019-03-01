@@ -9,7 +9,7 @@ import time
 from socket import gethostname
 from .api_client import APIClient
 from pathlib import Path
-from .utils import set_default_logger, add_logger_filehandler, get_config, is_ipaddress, is_uid, whoami
+from .utils import set_default_logger, add_logger_streamhandler, get_config, is_ipaddress, is_uid, whoami
 
 DEFAULT_CONFIG = Path.joinpath(Path(__file__).parent, "configs", "default.ini")
 DEFAULT_LOG = Path.joinpath(Path(__file__).parent, "logs", "default.log")
@@ -21,7 +21,7 @@ DEFAULT_LOG_POSIX = DEFAULT_LOG.as_posix()
 # logger of last resort
 def set_logger():
     logger = set_default_logger("CP_client", "DEBUG")
-    add_logger_filehandler(logger, "DEBUG", DEFAULT_LOG_POSIX)
+    add_logger_streamhandler(logger, "DEBUG")
 
 
 class CheckPointClient(APIClient):

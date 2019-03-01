@@ -9,7 +9,7 @@ setup(
     author='vavarachen',
     author_email='vavarachen@gmail.com',
     url='https://github.com/vavarachen/checkpoint_client',
-    packages=['checkpoint_client'],
+    packages=['checkpoint_client', 'checkpoint_client.api_client'],
     install_requires=['requests >= 2.6.0, < 3.0.0', 'requests'],
     classifiers=[
         'Development Status :: 3 - Alpha',
